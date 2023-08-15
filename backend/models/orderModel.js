@@ -1,25 +1,10 @@
 const mongoose = require("mongoose");
-
 const orderSchema = new mongoose.Schema({
   shippingInfo: {
-    address: {
-      type: String,
-      required: true,
-    },
-    city: {
-      type: String,
-      required: true,
-    },
-
-    state: {
-      type: String,
-      required: true,
-    },
-
-    country: {
-      type: String,
-      required: true,
-    },
+    address: { type: String, required: true },
+    city: { type: String, required: true },
+    state: { type: String, required: true },
+    country: { type: String, required: true },
     pinCode: {
       type: Number,
       required: true,
@@ -96,7 +81,7 @@ const orderSchema = new mongoose.Schema({
   orderStatus: {
     type: String,
     required: true,
-    default: "Processing",
+    default: "processing",
   },
   deliveredAt: Date,
   createdAt: {
@@ -104,5 +89,4 @@ const orderSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-
 module.exports = mongoose.model("Order", orderSchema);

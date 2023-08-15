@@ -18,28 +18,28 @@ const About = () => {
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src="https://res.cloudinary.com/tripleayt/image/upload/v1631555947/products/jpyibarlaxawvcvqjv5b.png"
+              src="https://res-console.cloudinary.com/dje55dg3h/thumbnails/v1/image/upload/v1691325633/YXZhdGFycy9jZWUzZDM1NC01MDVhLTRiZTItYjg4MS0yMDYwOWJhZTZhMzBfZTJjcmVs/preview"
               alt="Founder"
             />
-            <Typography>Abhishek Singh</Typography>
+            <Typography>Harshit Mishra</Typography>
             <Button onClick={visitInstagram} color="primary">
               Visit Instagram
             </Button>
             <span>
-              This is a sample wesbite made by @meabhisingh. Only with the
-              purpose to teach MERN Stack on the channel 6 Pack Programmer
+              This is a sample wesbite made by Harshit Mishra. Only with the
+              purpose to learn MERN Stack and implement its concepts.
             </span>
           </div>
           <div className="aboutSectionContainer2">
             <Typography component="h2">Our Brands</Typography>
             <a
-              href="https://www.youtube.com/channel/UCO7afj9AUo0zV69pqEYhcjw"
+              href="https://www.youtube.com/channel/UChsjOMJjuM2ENA3IwlIo_xw"
               target="blank"
             >
               <YouTubeIcon className="youtubeSvgIcon" />
             </a>
 
-            <a href="https://instagram.com/meabhisingh" target="blank">
+            <a href="https://instagram.com/harshitmishra1211" target="blank">
               <InstagramIcon className="instagramSvgIcon" />
             </a>
           </div>

@@ -92,87 +92,132 @@ function App() {
 
         <Route exact path="/about" component={About} />
 
-        <ProtectedRoute exact path="/account" component={Profile} />
+        <Route
+          exact
+          path="/account"
+          isAuthenticated={true}
+          component={Profile}
+        />
 
-        <ProtectedRoute exact path="/me/update" component={UpdateProfile} />
+        <Route
+          exact
+          path="/me/update"
+          isAuthenticated={true}
+          component={UpdateProfile}
+        />
 
-        <ProtectedRoute
+        <Route
           exact
           path="/password/update"
+          isAuthenticated={true}
           component={UpdatePassword}
         />
 
-        <Route exact path="/password/forgot" component={ForgotPassword} />
+        <Route
+          exact
+          path="/password/forgot"
+          isAuthenticated={true}
+          component={ForgotPassword}
+        />
 
-        <Route exact path="/password/reset/:token" component={ResetPassword} />
+        <Route
+          exact
+          path="/password/reset/:token"
+          isAuthenticated={true}
+          component={ResetPassword}
+        />
 
-        <Route exact path="/login" component={LoginSignUp} />
+        <Route
+          exact
+          path="/login"
+          isAuthenticated={true}
+          component={LoginSignUp}
+        />
 
-        <Route exact path="/cart" component={Cart} />
+        <Route exact path="/cart" isAuthenticated={true} component={Cart} />
 
-        <ProtectedRoute exact path="/shipping" component={Shipping} />
+        <Route
+          exact
+          path="/shipping"
+          isAuthenticated={true}
+          component={Shipping}
+        />
+        <Route
+          exact
+          path="/success"
+          isAuthenticated={true}
+          component={OrderSuccess}
+        />
 
-        <ProtectedRoute exact path="/success" component={OrderSuccess} />
+        <Route
+          exact
+          path="/orders"
+          isAuthenticated={true}
+          component={MyOrders}
+        />
 
-        <ProtectedRoute exact path="/orders" component={MyOrders} />
+        <Route
+          exact
+          path="/order/confirm"
+          isAuthenticated={true}
+          component={ConfirmOrder}
+        />
 
-        <ProtectedRoute exact path="/order/confirm" component={ConfirmOrder} />
+        <Route
+          exact
+          path="/order/:id"
+          isAuthenticated={true}
+          component={OrderDetails}
+        />
 
-        <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
-
-        <ProtectedRoute
+        <Route
           isAdmin={true}
           exact
           path="/admin/dashboard"
           component={Dashboard}
         />
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/products"
           isAdmin={true}
           component={ProductList}
         />
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/product"
           isAdmin={true}
           component={NewProduct}
         />
 
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/product/:id"
           isAdmin={true}
           component={UpdateProduct}
         />
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/orders"
           isAdmin={true}
           component={OrderList}
         />
 
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/order/:id"
           isAdmin={true}
           component={ProcessOrder}
         />
-        <ProtectedRoute
-          exact
-          path="/admin/users"
-          isAdmin={true}
-          component={UsersList}
-        />
+        <Route exact path="/admin/users" isAdmin={true} component={UsersList} />
 
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/user/:id"
           isAdmin={true}
           component={UpdateUser}
         />
 
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/reviews"
           isAdmin={true}
