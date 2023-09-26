@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +21,10 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "4.1",
     "mongoose": "^7.4.3",
+    "netlify-cli": "^16.4.2",
+    "netlify-lambda": "^2.0.16",
     "nodemailer": "^6.6.3",
+    "serverless-http": "^3.2.0",
     "stripe": "^8.174.0",
     "validator": "^13.6.0"
   }
