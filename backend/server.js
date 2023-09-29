@@ -1,6 +1,4 @@
 const app = require("./app");
-const express = require("express");
-const path = require("path");
 const connectDatabase = require("./config/database");
 const cloudinary = require("cloudinary");
 //handling uncaught Exception
@@ -26,10 +24,6 @@ const server = app.listen(process.env.PORT, () => {
   console.log(`server is working on http://localhost:${process.env.PORT}`);
 });
 
-app.use(express.static(path.join(__dirname, "../frontend/build")));
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-});
 //unhandled promise rejection
 process.on("unhandledRejection", (err) => {
   console.log("Error:" + err.message);
